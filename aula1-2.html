@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Programacao Web</title>
+    <script>
+        function onAddAluno1() {
+            //var nomeAluno = document.getElementById("nomeAluno").value;
+            //console.log(nomeAluno);
+            var botaoAluno = document.getElementById("botaoAluno");
+
+            botaoAluno.value = "Adicionar novo Aluno";
+
+            botaoAluno.style = "color: blue";
+
+        }
+
+        // nova forma de criar funções em JavaScript
+        var onAddAluno2 = () => {
+            alert("Olá com arrow");
+        }
+
+    </script>
+</head>
+
+<body style="margin-left: 15%; border: 1px solid black;">
+    <div style="margin: 15px; border: 1px solid green;">
+        <h1>Ola Programacao com Margin</h1>
+    </div>
+
+    <div style="padding: 15px; border: 1px solid red;">
+        <h1>Ola Programacao com Padding</h1>
+    </div>
+
+    <br />
+
+    <input id="nomeAluno"  type="text" />
+    <input id="botaoAluno" type="button" onclick="onAddAluno1()" value="Adicionar Aluno" />
+    <ul>
+        <li>1</li>
+    </ul>
+</body>
+
+</html>
