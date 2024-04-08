@@ -4,26 +4,30 @@
 <head>
     <title>Programacao Web</title>
     <script>
-        function onAddAluno1() {
-            //var nomeAluno = document.getElementById("nomeAluno").value;
-            //console.log(nomeAluno);
+        function onAddAluno() {
+            var nomeAluno = document.getElementById("nomeAluno").value;
+            var listaAlunos = document.getElementById("listaAlunos");
+
+            listaAlunos.innerHTML += "<li style='color:red'>"+nomeAluno+"</li>";
+            
+        }
+
+        // função executada quando página carrega
+        function onLoadBtnChangeStyle(){
             var botaoAluno = document.getElementById("botaoAluno");
-
             botaoAluno.value = "Adicionar novo Aluno";
-
             botaoAluno.style = "color: blue";
-
         }
 
         // nova forma de criar funções em JavaScript
-        var onAddAluno2 = () => {
+        var funcaoExemplo = () => {
             alert("Olá com arrow");
         }
 
     </script>
 </head>
 
-<body style="margin-left: 15%; border: 1px solid black;">
+<body onload="onLoadBtnChangeStyle()">
     <div style="margin: 15px; border: 1px solid green;">
         <h1>Ola Programacao com Margin</h1>
     </div>
@@ -34,9 +38,17 @@
 
     <br />
 
+    <a>Nome Aluno:</a>
     <input id="nomeAluno"  type="text" />
-    <input id="botaoAluno" type="button" onclick="onAddAluno1()" value="Adicionar Aluno" />
-    <ul>
+    
+    <a>Cor Clube</a>
+    <input id="corClubeAluno"  type="text" />
+    
+    <br>
+    <br>
+    <input id="botaoAluno" type="button" onclick="onAddAluno()" value="Adicionar Aluno" />
+
+    <ul id="listaAlunos">
         <li>1</li>
     </ul>
 </body>
