@@ -5,11 +5,18 @@
     <title>Programacao Web</title>
     <script>
         function onAddAluno() {
+            // vai buscar os valores necessários para criar uma nova entrada na lista de alunos
             var nomeAluno = document.getElementById("nomeAluno").value;
+            var corAluno = document.getElementById("corClubeAluno").value;
+            // vai buscar o elemento <ul> cujo id é listaAlunos
             var listaAlunos = document.getElementById("listaAlunos");
-
-            listaAlunos.innerHTML += "<li style='color:red'>"+nomeAluno+"</li>";
             
+            // adiciona HTML para dentro do <ul>
+            listaAlunos.innerHTML += "<li style='color:"+corAluno+"'>"+nomeAluno+"</li>";
+
+            // limpa os valores dos inputs
+            document.getElementById("nomeAluno").value = "";
+            document.getElementById("corClubeAluno").value = "";
         }
 
         // função executada quando página carrega
