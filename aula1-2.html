@@ -65,7 +65,7 @@
     <a>Cor Clube</a>
     <input id="corClubeAluno"  type="text" />
     <p id="alertaEmail" style="color:red">O email não é válido</p>
-    
+    <br/>
     <input id="botaoAluno" type="button" onclick="onAddAluno()" value="Adicionar Aluno" />
 
     <ul id="listaAlunos">
@@ -76,6 +76,8 @@
         document.getElementById("emailAluno").onkeyup = function(evt){
             let email = "";
             email = evt.target.value;
+
+            document.getElementById("alertaEmail").className = "esconde";
         }
     </script>
 </body>
