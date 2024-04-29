@@ -3,9 +3,14 @@
 
 <head>
     <title>Programacao Web</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    </link>
+    <script href="js/bootstrap.min.js" crossorigin="anonymous"></script>
+
     <style>
-        .esconde{
-            display:none;
+        .esconde {
+            display: none;
         }
     </style>
     <script>
@@ -16,18 +21,18 @@
             var emailAluno = document.getElementById("emailAluno").value;
             // vai buscar o elemento <ul> cujo id é listaAlunos
             var listaAlunos = document.getElementById("listaAlunos");
-            
+
             // validar se a variável nomeAluno está preenchida
-            if(nomeAluno==""){
+            if (nomeAluno == "") {
                 alert("Tem de preencher o nome do Aluno");
                 return;
             }
-                
+
 
             // adiciona HTML para dentro do <ul>
-            listaAlunos.innerHTML += "<li style='color:"+corClubeAluno+"'>"
-                +nomeAluno+" - "+emailAluno
-                +"</li>";
+            listaAlunos.innerHTML += "<li style='color:" + corClubeAluno + "'>"
+                + nomeAluno + " - " + emailAluno
+                + "</li>";
 
             // limpa os valores dos inputs
             document.getElementById("nomeAluno").value = "";
@@ -46,34 +51,41 @@
 </head>
 
 <body onload="onLoadBtnChangeStyle()">
-    <div style="margin: 15px; border: 1px solid green;">
-        <h1>Ola Programacao com Margin</h1>
+    <div class="container bg-danger-subtle">
+        <div class="m-3" style="border: 1px solid green;">
+            <h1>Ola Programacao com Margin</h1>
+        </div>
+
+        <div class="p-3" style=" border: 1px solid red;">
+            <h1>Ola Programacao com Padding</h1>
+        </div>
+
+        <br />
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-xs-12 col-sm-6 col-md-3 d-flex align-items-center">
+                <a>Nome Aluno:</a>
+                <input  id="nomeAluno" type="text" />
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <a>Email Aluno:</a>
+                <input  id="emailAluno" type="text" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <a>Cor Clube</a>
+                <input  id="corClubeAluno" type="text" />
+            </div>
+        </div>
+        <br />
+        <input id="botaoAluno" type="button" onclick="onAddAluno()" value="Adicionar Aluno" />
+
+        <ul id="listaAlunos">
+            <li>1</li>
+        </ul>
     </div>
-
-    <div style="padding: 15px; border: 1px solid red;">
-        <h1>Ola Programacao com Padding</h1>
-    </div>
-
-    <br />
-
-    <a>Nome Aluno:</a>
-    <input id="nomeAluno"  type="text" />
-
-    <a>Email Aluno:</a>
-    <input id="emailAluno" type="text" />
-    
-    <a>Cor Clube</a>
-    <input id="corClubeAluno"  type="text" />
-    <p id="alertaEmail" style="color:red">O email não é válido</p>
-    <br/>
-    <input id="botaoAluno" type="button" onclick="onAddAluno()" value="Adicionar Aluno" />
-
-    <ul id="listaAlunos">
-        <li>1</li>
-    </ul>
-
     <script>
-        document.getElementById("emailAluno").onkeyup = function(evt){
+        document.getElementById("emailAluno").onkeyup = function (evt) {
             let email = "";
             email = evt.target.value;
 
