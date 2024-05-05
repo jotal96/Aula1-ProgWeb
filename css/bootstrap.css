@@ -8,6 +8,7 @@
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
+  --bs-joao: #18f8d6;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
@@ -8927,6 +8928,10 @@ textarea.form-control-lg {
 
 .bg-gradient {
   background-image: var(--bs-gradient) !important;
+}
+
+.bg-porto-sporting {
+  background-color: var(--bs-joao) !important;
 }
 
 .user-select-all {
